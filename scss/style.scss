@@ -1,0 +1,99 @@
+$primaryColor: #1a95e0;
+$secondaryColor: #727578;
+$fontColor: #151515;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+@mixin linkBackground() {
+    &:hover {
+        background-color: $primaryColor;
+        color: white;
+    }
+}
+
+* {
+    font-family: 'Roboto Mono', monospace;
+    color: $fontColor;
+}
+
+body {
+    margin-top: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.logo {
+    a {
+        color: $primaryColor;
+        font-size: 16px;
+        @include linkBackground();
+    }
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-evenly;
+    a {
+        color: $secondaryColor;
+        
+        &:hover {
+            color: $fontColor;
+        }
+    }
+}
+
+section {
+    margin-top: 40px;
+}
+
+.title {
+    font-size: 18px;
+    text-decoration: underline;
+    text-decoration-color: gray;
+    text-decoration-thickness: .125em;
+    text-underline-offset: 1.5px;
+
+    a {
+        @include linkBackground();
+    }
+}
+
+.date {
+    text-align: center;
+    font-weight: bold;
+}
+
+.project {
+    padding-left: 1em;
+}
+
+.content {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.separator {
+    display: none;
+}
+
+@media (min-width: 550px) {
+    #stuffs {
+        text-align: right;
+    }
+}
+
+footer {
+    hr {
+        border-color: $fontColor;
+    }
+
+    a {
+        @include linkBackground();
+    }
+}

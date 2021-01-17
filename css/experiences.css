@@ -47,8 +47,41 @@ footer a:hover {
   color: white;
 }
 
-h3 {
+header {
+  margin-bottom: 40px;
+}
+
+article {
   margin-top: 40px;
 }
 
-/*# sourceMappingURL=contact.css.map */
+.title {
+  font-size: 18px;
+  text-decoration: underline;
+  text-decoration-color: gray;
+  text-decoration-thickness: 0.125em;
+  text-underline-offset: 1.5px;
+}
+.title a:hover {
+  background-color: #1a95e0;
+  color: white;
+}
+
+.image {
+  width: 100%;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.website:hover {
+  background-color: #1a95e0;
+  color: white;
+}
+
+.date {
+  text-align: right;
+}
+
+/*# sourceMappingURL=experiences.css.map */

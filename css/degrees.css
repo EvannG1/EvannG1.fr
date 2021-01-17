@@ -64,9 +64,15 @@ article {
 }
 
 .image {
+  display: none;
   width: 100%;
 }
 
+@media (min-width: 550px) {
+  .image {
+    display: block;
+  }
+}
 .website:hover {
   background-color: #1a95e0;
   color: white;

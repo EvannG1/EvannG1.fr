@@ -75,6 +75,9 @@ section {
     text-align: right;
   }
 }
+footer {
+  text-align: center;
+}
 footer hr {
   border-color: #151515;
 }

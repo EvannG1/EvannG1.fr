@@ -62,17 +62,9 @@ article {
   text-decoration-thickness: 0.125em;
   text-underline-offset: 1.5px;
 }
-.title a:hover {
-  background-color: #1a95e0;
-  color: white;
-}
 
 .image {
   width: 100%;
-}
-
-.title {
-  font-weight: bold;
 }
 
 .website:hover {

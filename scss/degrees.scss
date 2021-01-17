@@ -14,18 +14,10 @@ article {
     text-decoration-color: gray;
     text-decoration-thickness: .125em;
     text-underline-offset: 1.5px;
-
-    a {
-        @include linkBackground();
-    }
 }
 
 .image {
     width: 100%;
-}
-
-.title {
-    font-weight: bold;
 }
 
 .website {

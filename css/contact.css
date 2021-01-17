@@ -47,8 +47,16 @@ footer a:hover {
   color: white;
 }
 
-h3 {
-  margin-top: 40px;
+header {
+  margin-bottom: 40px;
+}
+
+.title {
+  font-size: 18px;
+  text-decoration: underline;
+  text-decoration-color: gray;
+  text-decoration-thickness: 0.125em;
+  text-underline-offset: 1.5px;
 }
 
 /*# sourceMappingURL=contact.css.map */

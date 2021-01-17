@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+* {
+  font-family: "Roboto Mono", monospace;
+  color: #151515;
+}
+
+body {
+  margin-top: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.logo a {
+  color: #1a95e0;
+  font-size: 16px;
+}
+.logo a:hover {
+  background-color: #1a95e0;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+}
+.navbar a {
+  color: #727578;
+}
+.navbar a:hover {
+  color: #151515;
+}
+
+footer {
+  text-align: center;
+}
+footer hr {
+  border-color: #151515;
+}
+footer a:hover {
+  background-color: #1a95e0;
+  color: white;
+}
+
+section {
+  margin-top: 40px;
+}
+
+.title {
+  font-size: 18px;
+  text-decoration: underline;
+  text-decoration-color: gray;
+  text-decoration-thickness: 0.125em;
+  text-underline-offset: 1.5px;
+}
+.title a:hover {
+  background-color: #1a95e0;
+  color: white;
+}
+
+.date {
+  text-align: center;
+  font-weight: bold;
+}
+
+.project {
+  padding-left: 1em;
+}
+
+.content {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+@media (min-width: 550px) {
+  #stuffs {
+    text-align: right;
+  }
+}
+
+/*# sourceMappingURL=about.css.map */

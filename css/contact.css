@@ -36,45 +36,6 @@ li {
   color: #151515;
 }
 
-section {
-  margin-top: 40px;
-}
-
-.title {
-  font-size: 18px;
-  text-decoration: underline;
-  text-decoration-color: gray;
-  text-decoration-thickness: 0.125em;
-  text-underline-offset: 1.5px;
-}
-.title a:hover {
-  background-color: #1a95e0;
-  color: white;
-}
-
-.date {
-  text-align: center;
-  font-weight: bold;
-}
-
-.project {
-  padding-left: 1em;
-}
-
-.content {
-  font-size: 16px;
-  font-weight: 300;
-}
-
-.separator {
-  display: none;
-}
-
-@media (min-width: 550px) {
-  #stuffs {
-    text-align: right;
-  }
-}
 footer {
   text-align: center;
 }
@@ -86,4 +47,4 @@ footer a:hover {
   color: white;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=contact.css.map */

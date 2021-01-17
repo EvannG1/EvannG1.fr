@@ -1,0 +1,37 @@
+@import "global";
+
+section {
+    margin-top: 40px;
+}
+
+.title {
+    font-size: 18px;
+    text-decoration: underline;
+    text-decoration-color: gray;
+    text-decoration-thickness: .125em;
+    text-underline-offset: 1.5px;
+
+    a {
+        @include linkBackground();
+    }
+}
+
+.date {
+    text-align: center;
+    font-weight: bold;
+}
+
+.project {
+    padding-left: 1em;
+}
+
+.content {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+@media (min-width: 550px) {
+    #stuffs {
+        text-align: right;
+    }
+}

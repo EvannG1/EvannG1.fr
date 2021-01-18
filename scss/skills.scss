@@ -16,6 +16,10 @@ section {
     text-underline-offset: 1.5px;
 }
 
+.linkedin {
+    @include linkBackground();
+}
+
 .card {
     width: 200px;
     background-color: #FFF;

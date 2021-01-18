@@ -1,0 +1,53 @@
+@import "global";
+
+header {
+    margin-bottom: 40px;
+}
+
+section {
+    margin-top: 20px;
+}
+
+.title {
+    font-size: 18px;
+    text-decoration: underline;
+    text-decoration-color: gray;
+    text-decoration-thickness: .125em;
+    text-underline-offset: 1.5px;
+}
+
+.card {
+    width: 200px;
+    background-color: #FFF;
+    box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.61);
+    border-radius: 2%;
+}
+
+.card-header {
+    height: 200px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.card-image {
+    width: 100%;
+    max-height: 200px;
+}
+
+.card-separator {
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+.card-content {
+    padding: 1rem;
+    text-align: center;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+progress {
+    height: 2rem;
+}

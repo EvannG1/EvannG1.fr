@@ -70,6 +70,11 @@ section {
   border-radius: 2%;
 }
 
+@media (max-width: 550px) {
+  .card {
+    margin-top: 20px;
+  }
+}
 .card-header {
   height: 200px;
   display: table-cell;

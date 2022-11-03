@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Degree;
+
 class MainController extends Controller
 {
     public function about()
@@ -11,7 +13,8 @@ class MainController extends Controller
 
     public function degrees()
     {
-        return view('degrees');
+        $degrees = Degree::orderBy('lft')->get();
+        return view('degrees', compact('degrees'));
     }
 
     public function experiences()

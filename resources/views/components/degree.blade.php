@@ -2,14 +2,17 @@
     <div class="row">
         <div class="two columns">
             <a href="{{ $schoolWebsite }}" target="_blank" rel="noreferrer noopener">
-                <img class="image" src="{{ $degreeImage }}" alt="{{ $schoolName }}">
+                <img class="image" src="{{ url("storage/$degreeImage") }}" alt="{{ $schoolName }}">
             </a>
         </div>
 
         <div class="ten columns project">
-            <p class="name"><i class="fas fa-graduation-cap"></i> {{ $name }}</p>
+            <p class="name">
+                <i class="fas fa-graduation-cap"></i>
+                {{ $name }}
+            </p>
             <p class="content">
-                {{ $description }}
+                {!! $description !!}
             </p>
             <div class="row">
                 <div class="seven columns">
@@ -23,7 +26,7 @@
                 <div class="five columns">
                     <p class="date">
                         <i class="far fa-calendar-alt"></i>
-                        From {{ $startDate }} to {{ $endDate }}
+                        From {{ \Carbon\Carbon::parse($startDate)->format('d/m/Y') }} to {{ \Carbon\Carbon::parse($endDate)->format('d/m/Y') }}
                     </p>
                 </div>
             </div>

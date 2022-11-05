@@ -27,7 +27,7 @@ class SkillRequest extends FormRequest
         return [
             'name' => 'required|max:255',
             'skill_category_id' => 'required|exists:skill_categories,id',
-            'image' => 'required|image|max:2048',
+            'image' => 'nullable|image|max:2048',
         ];
     }
 

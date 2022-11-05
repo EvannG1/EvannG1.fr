@@ -13,11 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('degrees', function (Blueprint $table) {
+        Schema::create('skill_categories', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
             $table->integer('parent_id')->default(0)->nullable();
             $table->integer('lft')->default(0);
             $table->integer('rgt')->default(0);
             $table->integer('depth')->default(0);
+            $table->timestamps();
         });
     }
 
@@ -28,11 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('degrees', function (Blueprint $table) {
-            $table->dropColumn('parent_id');
-            $table->dropColumn('lft');
-            $table->dropColumn('rgt');
-            $table->dropColumn('depth');
-        });
+        Schema::dropIfExists('skill_categories');
     }
 };

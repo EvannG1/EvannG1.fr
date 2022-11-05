@@ -25,7 +25,13 @@ class ExperienceRequest extends FormRequest
     public function rules()
     {
         return [
-            // 'name' => 'required|min:5|max:255'
+            'name' => 'required|max:255',
+            'description' => 'required',
+            'city' => 'required|min:5|max:255',
+            'start_date' => 'required|date',
+            'end_date' => 'nullable|date',
+            'company_website' => 'nullable|url',
+            'company_logo' => 'nullable|image|max:2048',
         ];
     }
 

@@ -14,13 +14,17 @@ class Experience extends Component
     public string $companyLogo;
     public string $companyWebsite;
 
-    public function __construct(string $name, string $description, string $city, string $startDate, string $endDate, string $companyLogo, string $companyWebsite)
+    public function __construct(string $name, string $description, string $city, string $startDate, ?string $endDate, string $companyLogo, string $companyWebsite)
     {
         $this->name = $name;
         $this->description = $description;
         $this->city = $city;
         $this->startDate = $startDate;
-        $this->endDate = $endDate;
+        if(is_null($endDate)) {
+            $this->endDate = 'Present';
+        } else {
+            $this->endDate = $endDate;
+        }
         $this->companyLogo = $companyLogo;
         $this->companyWebsite = $companyWebsite;
     }

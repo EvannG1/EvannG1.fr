@@ -2,16 +2,16 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Requests\ExperienceRequest;
+use App\Http\Requests\SkillCategoryRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 
 /**
- * Class ExperienceCrudController
+ * Class SkillCategoryCrudController
  * @package App\Http\Controllers\Admin
  * @property-read \Backpack\CRUD\app\Library\CrudPanel\CrudPanel $crud
  */
-class ExperienceCrudController extends CrudController
+class SkillCategoryCrudController extends CrudController
 {
     use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
@@ -27,9 +27,9 @@ class ExperienceCrudController extends CrudController
      */
     public function setup()
     {
-        CRUD::setModel(\App\Models\Experience::class);
-        CRUD::setRoute(config('backpack.base.route_prefix') . '/experience');
-        CRUD::setEntityNameStrings('experience', 'experiences');
+        CRUD::setModel(\App\Models\SkillCategory::class);
+        CRUD::setRoute(config('backpack.base.route_prefix') . '/skill-category');
+        CRUD::setEntityNameStrings('skills category', 'skills categories');
     }
 
     protected function setupReorderOperation()
@@ -53,8 +53,6 @@ class ExperienceCrudController extends CrudController
     protected function setupListOperation()
     {
         CRUD::column('name');
-        CRUD::column('start_date');
-        CRUD::column('end_date')->default('Present');
     }
 
     /**
@@ -65,15 +63,9 @@ class ExperienceCrudController extends CrudController
      */
     protected function setupCreateOperation()
     {
-        CRUD::setValidation(ExperienceRequest::class);
+        CRUD::setValidation(SkillCategoryRequest::class);
 
         CRUD::field('name');
-        CRUD::field('description')->type('summernote');
-        CRUD::field('city');
-        CRUD::field('start_date')->size('6')->type('date');
-        CRUD::field('end_date')->size('6')->type('date');
-        CRUD::field('company_website')->size('6');
-        CRUD::field('company_logo')->size('6')->type('upload')->upload(true)->disk('public');
     }
 
     /**

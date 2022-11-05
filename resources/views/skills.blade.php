@@ -7,84 +7,19 @@
             class="linkedin" href="https://www.linkedin.com/in/evanngehin/" target="_blank"
             rel="noreferrer noopener">Linkedin profile</a>.
     </p>
-
-    <section id="programming">
-        <p class="title">Programming</p>
-        <div class="row">
-            <x-skill
-                name="Laravel"
-                image="https://evanng1.fr/assets/images/skills/laravel.png"
-            />
-            <x-skill
-                name="Laravel"
-                image="https://evanng1.fr/assets/images/skills/laravel.png"
-            />
-            <x-skill
-                name="Laravel"
-                image="https://evanng1.fr/assets/images/skills/laravel.png"
-            />
-            <x-skill
-                name="Laravel"
-                image="https://evanng1.fr/assets/images/skills/laravel.png"
-            />
-        </div>
-    </section>
-
-    <section id="tools">
-        <p class="title">Software and tools</p>
-        <div class="row">
-            <x-skill
-                name="Laravel"
-                image="https://evanng1.fr/assets/images/skills/laravel.png"
-            />
-            <x-skill
-                name="Laravel"
-                image="https://evanng1.fr/assets/images/skills/laravel.png"
-            />
-            <x-skill
-                name="Laravel"
-                image="https://evanng1.fr/assets/images/skills/laravel.png"
-            />
-            <x-skill
-                name="Laravel"
-                image="https://evanng1.fr/assets/images/skills/laravel.png"
-            />
-        </div>
-    </section>
-
-    <section id="languages">
-        <p class="title">Systems and cloud</p>
-        <div class="row">
-            <x-skill
-                name="Laravel"
-                image="https://evanng1.fr/assets/images/skills/laravel.png"
-            />
-            <x-skill
-                name="Laravel"
-                image="https://evanng1.fr/assets/images/skills/laravel.png"
-            />
-            <x-skill
-                name="Laravel"
-                image="https://evanng1.fr/assets/images/skills/laravel.png"
-            />
-            <x-skill
-                name="Laravel"
-                image="https://evanng1.fr/assets/images/skills/laravel.png"
-            />
-        </div>
-    </section>
-
-    <section id="languages">
-        <p class="title">Spoken languages</p>
-        <div class="row">
-            <x-skill
-                name="Laravel"
-                image="https://evanng1.fr/assets/images/skills/laravel.png"
-            />
-            <x-skill
-                name="Laravel"
-                image="https://evanng1.fr/assets/images/skills/laravel.png"
-            />
-        </div>
-    </section>
+    @foreach($categories as $category)
+        <section id="{{ \Str::slug($category->name) }}">
+            <p class="title">
+                {{ $category->name }}
+            </p>
+            <div class="row">
+                @foreach($category->skills as $skill)
+                    <x-skill
+                        :name="$skill->name"
+                        :image="$skill->image"
+                    />
+                @endforeach
+            </div>
+        </section>
+    @endforeach
 @endsection

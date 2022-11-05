@@ -11,15 +11,14 @@
 
     <section id="projects">
         <p class="title">Latest projects</p>
-
-        <x-project
-            name="easyGames"
-            date="June 2022"
-            link="https://easygames.fr"
-            description="easyGames is a project to host game servers such as Minecraft, ARK: Survival Evolved, CS:GO, Garry's Mod...
-            I take care of the general setup of the project such as development and production servers. The following technologies and hardware are currently used to complete this project:
-            AWS EC2 (reverse proxy and loadbalancer), AWS S3 (backup storage), Hetzner Bare Metal Server to host the game servers, virtual servers under Proxmox (home server) to host the management panel (Pterodactyl) and the billing website (WHMCS)."
-        />
+        @foreach($projects as $project)
+            <x-project
+                :name="$project->name"
+                :date="$project->date"
+                :link="$project->link"
+                :description="$project->description"
+            />
+        @endforeach
     </section>
 
     <section id="equipments">

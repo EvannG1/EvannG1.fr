@@ -11,11 +11,15 @@ class Project extends Component
     public string $link;
     public string $date;
 
-    public function __construct(string $name, string $description, string $link, string $date)
+    public function __construct(string $name, string $description, ?string $link, string $date)
     {
         $this->name = $name;
         $this->description = $description;
-        $this->link = $link;
+        if(is_null($link)) {
+            $this->link = '#';
+        } else {
+            $this->link = $link;
+        }
         $this->date = $date;
     }
 

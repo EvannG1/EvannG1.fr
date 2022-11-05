@@ -5,11 +5,11 @@
         </div>
         <div class="ten columns project">
             <p class="title">
-                <a href="{{ $link }}" rel="noreferrer noopener">{{ $name }}</a>
+                <a href="{{ $link }}" {{ $link !== "#" ? 'target="_blank" rel="noreferrer noopener"' : '' }}>{{ $name }}</a>
             </p>
             <p class="content">
                 <span>
-                    {{ $description }}
+                    {!! $description !!}
                 </span>
             </p>
         </div>

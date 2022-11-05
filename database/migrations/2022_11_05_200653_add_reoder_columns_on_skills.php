@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('degrees', function (Blueprint $table) {
+        Schema::table('skills', function (Blueprint $table) {
             $table->integer('parent_id')->default(0)->nullable();
             $table->integer('lft')->default(0);
             $table->integer('rgt')->default(0);
@@ -28,7 +28,7 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('degrees', function (Blueprint $table) {
+        Schema::table('skills', function (Blueprint $table) {
             $table->dropColumn('parent_id');
             $table->dropColumn('lft');
             $table->dropColumn('rgt');

@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class SkillRequest extends FormRequest
+class SkillCategoryRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -26,8 +26,6 @@ class SkillRequest extends FormRequest
     {
         return [
             'name' => 'required|max:255',
-            'skill_category_id' => 'required|exists:skill_categories,id',
-            'image' => 'required|image|max:2048',
         ];
     }
 

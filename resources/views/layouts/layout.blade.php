@@ -8,8 +8,8 @@
     <meta name="description" content="Portfolio en ligne de Evann Gehin">
     <meta name="author" content="Evann Gehin">
     <title>{{ config('app.name') }} - Portfolio</title>
-    @vite('resources/css/normalize.css')
-    @vite('resources/css/skeleton.css')
+    <link rel="stylesheet" href="{{ asset('assets/css/normalize.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/skeleton.css') }}">
     @vite('resources/css/app.css')
     <!-- Analytics -->
     <script defer data-domain="evanng1.fr" src="https://analytics.alpasso.fr/js/plausible.js"></script>

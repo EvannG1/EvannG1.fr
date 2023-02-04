@@ -11,9 +11,6 @@
     <link rel="stylesheet" href="{{ asset('assets/css/normalize.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/skeleton.css') }}">
     @vite('resources/css/app.css')
-    <!-- Analytics -->
-    <script defer data-domain="evanng1.fr" src="https://analytics.alpasso.fr/js/plausible.js"></script>
-    <!-- End Analytics -->
 </head>
 <body>
     <div class="container">

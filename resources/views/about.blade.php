@@ -37,7 +37,7 @@
             <div id="stuffs" class="six columns">
                 <p>Other stuffs :</p>
                 <li>Screens : Gigabyte 27" G27QC-A (165Hz)</li>
-                <li>Workstation : Materiel.net Bollywood</li>
+                <li>Workstation : MacBook Pro i9</li>
                 <li>Laptop : MacBook Air M2</li>
                 <li>Home Server : Dell PowerEdge T320</li>
                 <li>Smartphone : iPhone 13 Pro</li>

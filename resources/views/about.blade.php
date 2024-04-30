@@ -4,7 +4,7 @@
     <section id="about">
         <p class="title">About</p>
         <p class="content">
-            Former President of the <a href="#" target="_blank" rel="noreferrer noopener">Alpasso association</a>, self-taught and passionate about web application development and server administration for more than 10 years.<br>
+            Former President of the <a href="#" rel="noreferrer noopener">Alpasso association</a>, self-taught and passionate about web application development and server administration for more than 10 years.<br>
             I'm currently working as a Linux System Administrator at <a href="https://miratlas.com" target="_blank" rel="noreferrer noopener">Miratlas</a>.<br>
         </p>
     </section>
@@ -27,7 +27,7 @@
             <div id="hardware" class="six columns">
                 <p>Primary computer hardware :</p>
                 <li>CPU : i7-13700KF @5.4GHz</li>
-                <li>GPU : RTX 4080</li>
+                <li>GPU : NVIDIA GeForce RTX 4080</li>
                 <li>RAM : 32GB (2x16GB) DDR5 - 5200MHz</li>
                 <li>SSD NVMe 2TB + SSD NVMe 1TB</li>
                 <li>Motherboard : B760 GAMING PLUS WIFI</li>

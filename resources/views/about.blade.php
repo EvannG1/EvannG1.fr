@@ -4,7 +4,7 @@
     <section id="about">
         <p class="title">About</p>
         <p class="content">
-            Former President of the <a href="https://alpasso.fr" target="_blank" rel="noreferrer noopener">Alpasso association</a>, self-taught and passionate about web application development and server administration for more than 10 years.<br>
+            Former President of the <a href="#" target="_blank" rel="noreferrer noopener">Alpasso association</a>, self-taught and passionate about web application development and server administration for more than 10 years.<br>
             I'm currently working as a Linux System Administrator at <a href="https://miratlas.com" target="_blank" rel="noreferrer noopener">Miratlas</a>.<br>
         </p>
     </section>

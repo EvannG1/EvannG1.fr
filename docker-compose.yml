@@ -1,11 +1,36 @@
-version: '2'
 services:
-    db:
-        container_name: evanng1-db
-        image: mariadb:10.6
+    app:
+        container_name: evanng1-app
+        build:
+            context: ./
+            dockerfile: ./Dockerfile-php
+        working_dir: /var/www/
         restart: unless-stopped
         env_file: .env
+        volumes:
+            - ./:/var/www
+        depends_on:
+            - db
+
+    nginx:
+        container_name: evanng1-nginx
+        build:
+            context: ./
+            dockerfile: ./Dockerfile-nginx
+        restart: unless-stopped
         ports:
-            - "3306:3306"
+        - "8080:80"
+        volumes:
+        - ./nginx:/etc/nginx/conf.d
+        - ./:/var/www
+        depends_on:
+            - app
+            - db
+
+    db:
+        container_name: evanng1-db
+        image: mariadb:10.11
+        restart: unless-stopped
+        env_file: .env
         volumes:
             - ./mysql-data:/var/lib/mysql
